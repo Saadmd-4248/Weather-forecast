@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Search } from 'lucide-react';
-import logo from './assets/background.jpg'
-import gif from './assets/output-onlinegiftools.gif'
+
 
 const Weather = () => {
     const [time, setTime] = useState(new Date());
@@ -85,7 +84,7 @@ const Weather = () => {
 
     return (
         <div className='h-screen flex relative justify-center items-center overflow-hidden'>
-            <img src={logo} className='h-full w-screen object-cover' />
+            <img src="/assets/background.jpg" className='h-full w-screen object-cover' />
 
 
             <div className='bg-black/50 border border-white/40 rounded-2xl p-6 h-[82%] w-[75%] absolute flex items-center justify-center gap-5'>
@@ -93,7 +92,7 @@ const Weather = () => {
                 {/* Loading Screen */}
                 <div className={`h-[100%] w-[60%] p-7 backdrop-blur-xl border flex flex-col items-center justify-center border-white/30 rounded-2xl ${loading ? '' : 'hidden'}`}>
                     <div className="w-[55%] mx-auto">
-                        <img src={gif} className="w-full h-full object-cover" />
+                        <img src="/assets/output-onlinegiftools.gif" className="w-full h-full object-cover" />
                     </div>
                     <div className="text-center">
                         <h1 className="font-poppins font-light text-white text-xl mt-5">Detecting your location</h1>
@@ -106,7 +105,7 @@ const Weather = () => {
                     <div className='h-[100%] w-[60%] border backdrop-blur-xl p-7 border-white/30 rounded-2xl flex flex-col items-center justify-between bg-[linear-gradient(to_bottom,_rgba(233,208,34,0.1),_rgba(230,11,9,0.1))] '>
                         <div className=" flex flex-col items-center">
                             <div className="w-[60%]">
-                                <img src={`./assets/${getWeatherIcon(weatherData.weather[0].main)}`} className="w-full h-full object-cover" />
+                                <img src={`/assets/${getWeatherIcon(weatherData.weather[0].main)}`} className="w-full h-full object-cover" />
                             </div>
 
                             <div className="text-white text-center">
@@ -162,7 +161,7 @@ const Weather = () => {
                     {searchData && (
                         <div className=" h-[90%]  flex flex-col items-center justify-between  ">
                             <div className="w-[60%]">
-                                <img src={`./assets/${getWeatherIcon(searchData.weather[0].main)}`} className="object-cover h-full w-full" />
+                                <img src={`/assets/${getWeatherIcon(searchData.weather[0].main)}`} className="object-cover h-full w-full" />
                             </div>
 
 
